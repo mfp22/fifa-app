@@ -1,23 +1,17 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import GlobalStyle from 'themes/global';
+import Home from 'pages/home';
 
-function App() {
+import dark from 'themes/dark';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={dark}>
+      <GlobalStyle />
+      <Home />
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
