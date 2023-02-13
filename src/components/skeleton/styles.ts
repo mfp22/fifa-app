@@ -1,8 +1,14 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components'
 
-interface TeamStatisticsNumberProps {
-  number: number;
-}
+const skeleton = keyframes`
+  0% {
+    background-color: #002436;
+  }
+  100% {
+    background-color: #013752;
+  }
+`;
+
 
 export const Team = styled.div`
   padding: 1rem;
@@ -16,32 +22,35 @@ export const TeamTop = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: ${({ theme }) => theme.colors.textPrimary};
+  color: ${({ theme }) => theme.colors.textSecondary};
 `;
 
 export const TeamLocality = styled.p`
   font-size: ${({ theme }) => theme.fontSize.small};
+  width: 30px;
+  height: 10px;
+  border-radius: 2px;
+  animation: ${skeleton} 1s linear infinite alternate;
 `;
 
 export const TeamMain = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin: 1rem 0;
+  margin: auto;
 `;
 
-export const TeamLogo = styled.img`
+export const TeamLogo = styled.div`
   width: 65px;
   height: 65px;
   margin-bottom: 1rem;
+  border-radius: 8px;
+  animation: ${skeleton} 1s linear infinite alternate;
 `;
 
-export const TeamName = styled.p`
-  font-size: ${({ theme }) => theme.fontSize.medium};
-  color: ${({ theme }) => theme.colors.white};
+export const TeamName = styled.div`
+  width: 65px;
+  height: 10px;
   margin: 0;
-  font-weight: 500;
+  border-radius: 2px;
+  animation: ${skeleton} 1s linear infinite alternate;
 `;
 
 export const TeamStatistics = styled.div`
@@ -60,28 +69,21 @@ export const TeamStatisticsItem = styled.div`
 
 export const TeamStatisticsLabel = styled.span`
   font-size: ${({ theme }) => theme.fontSize.small};
-  color: ${({ theme }) => theme.colors.textPrimary};
+  color: ${({ theme }) => theme.colors.textSecondary};
   margin-bottom: 0.5rem;
   display: block;
   text-transform: uppercase;
 `;
 
-export const TeamStatisticsNumber = styled.p<TeamStatisticsNumberProps>`
+export const TeamStatisticsNumber = styled.p`
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: ${({ theme }) => theme.fontSize.medium};
-  color: ${({ theme }) => theme.colors.white};
-  background-color: ${({ theme, number }) =>
-    number >= 85
-      ? theme.colors.successDark
-      : number < 85 && number >= 79
-      ? theme.colors.success
-      : number < 79 && number >= 65
-      ? theme.colors.warning
-      : theme.colors.danger};
+  color: ${({ theme }) => theme.colors.textSecondary};
   border-radius: 4px;
   padding: 0.6rem;
   width: 20px;
   height: 20px;
+  animation: ${skeleton} 1s linear infinite alternate;
 `;

@@ -11,6 +11,6 @@ export const Button = styled.button`
   font-weight: 600;
   text-transform: uppercase;
   padding: 1rem 0;
-  height: 45px;
+  height: 50px;
   opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
 `;

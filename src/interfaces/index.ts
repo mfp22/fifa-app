@@ -27,8 +27,10 @@ export interface ITeam {
 export interface IColors {
   white: string;
   background: string;
+  cardInner: string;
   card: string;
-  text: string;
+  textPrimary: string;
+  textSecondary: string;
   success: string;
   successDark: string;
   warning: string;

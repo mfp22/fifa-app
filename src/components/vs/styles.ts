@@ -10,7 +10,7 @@ export const VS = styled.span`
     position: absolute;
     top: 50%;
     z-index: 1;
-    background-color: ${({ theme }) => theme.colors.text};
+    background-color: ${({ theme }) => theme.colors.textPrimary};
     left: 0;
     width: 100%;
     height: 1px;

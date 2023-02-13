@@ -3,8 +3,10 @@ const darkTheme = {
   colors: {
     white: '#FFFFFF',
     background: '#010A0F',
+    cardInner: '#002436',
     card: '#00141E',
-    text: '#95CBE7',
+    textPrimary: '#95CBE7',
+    textSecondary: '#083751',
     success: '#00CBDA',
     successDark: '#056d74',
     warning: '#FBBC04',

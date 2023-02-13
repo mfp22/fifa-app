@@ -2,6 +2,8 @@ import React from 'react';
 import * as S from './styles';
 import Header from 'components/header';
 import Team from 'components/team';
+import Empty from 'components/empty';
+import Skeleton from 'components/skeleton';
 import Button from 'components/button';
 import VS from 'components/vs';
 import { useStore } from 'store';
@@ -11,37 +13,89 @@ const Home = () => {
   const teamAway = useStore((state) => state.teamAway);
   const teamHomeActive = useStore((state) => state.teamHomeActive);
   const teamAwayActive = useStore((state) => state.teamAwayActive);
+  const teamHomeLoading = useStore((state) => state.teamHomeLoading);
+  const teamAwayLoading = useStore((state) => state.teamAwayLoading);
 
-  const { setTeamHome, setTeamAway, setTeamHomeActive, setTeamAwayActive } =
-    useStore();
+  const {
+    setTeamHome,
+    setTeamAway,
+    setTeamHomeActive,
+    setTeamAwayActive,
+    setTeamHomeLoading,
+    setTeamAwayLoading,
+  } = useStore();
 
-  const handleGenerateTeam = () => {
+  const handleGenerate = () => {
     if (teamHomeActive) {
+      setTeamHomeLoading(true)
       setTimeout(() => {
         setTeamHome();
         setTeamHomeActive(false);
+        setTeamHomeLoading(false)
       }, 1000);
     } else {
+      setTeamAwayLoading(true)
       setTimeout(() => {
         setTeamAway();
         setTeamAwayActive(true);
+        setTeamAwayLoading(false)
       }, 1000);
     }
+  };
+
+  const handleRefleshTeamHome = () => {
+    setTeamHomeLoading(true)
+    setTimeout(() => {
+      setTeamHome();
+      setTeamHomeActive(false);
+      setTeamHomeLoading(false)
+    }, 1000);
+  };
+
+  const handleRefleshTeamAway = () => {
+    setTeamAwayLoading(true)
+    setTimeout(() => {
+      setTeamAway();
+      setTeamAwayLoading(false)
+    }, 1000);
   };
 
   return (
     <S.Home>
       <Header />
-      <Team team={teamHome} onReflesh={setTeamHome} locality="Home" />
+      {teamHomeLoading ? (
+        <Skeleton />
+      ) : !teamHomeLoading && teamHomeActive ? (
+        <Empty />
+      ) : (
+        <Team
+          team={teamHome}
+          onReflesh={handleRefleshTeamHome}
+          locality="Home"
+        />
+      )}
+
       <VS />
-      <Team team={teamAway} onReflesh={setTeamAway} locality="Away" />
+
+      {teamAwayLoading ? (
+        <Skeleton />
+      ) : !teamAwayLoading && !teamAwayActive ? (
+        <Empty />
+      ) : (
+        <Team
+          team={teamAway}
+          onReflesh={handleRefleshTeamAway}
+          locality="Away"
+        />
+      )}
+
       <S.ButtonWrapper>
         {teamHomeActive ? (
-          <Button label="Generate Home" onClick={handleGenerateTeam} />
+          <Button label="Generate Home" onClick={handleGenerate} />
         ) : (
           <Button
             label="Generate Away"
-            onClick={handleGenerateTeam}
+            onClick={handleGenerate}
             disabled={teamAwayActive}
           />
         )}

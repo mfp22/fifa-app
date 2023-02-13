@@ -7,10 +7,14 @@ interface DefaultState {
   teamAway: ITeam;
   teamHomeActive: boolean;
   teamAwayActive: boolean;
+  teamHomeLoading: boolean;
+  teamAwayLoading: boolean;
   setTeamHome: () => void;
   setTeamAway: () => void;
   setTeamHomeActive: (active: boolean) => void;
   setTeamAwayActive: (active: boolean) => void;
+  setTeamHomeLoading: (loading: boolean) => void;
+  setTeamAwayLoading: (loading: boolean) => void;
 }
 
 const generateTeamAway = (teamHome: ITeam) => {
@@ -27,6 +31,8 @@ export const useStore = create<DefaultState>((set) => ({
   teamAway: teams[1],
   teamHomeActive: true,
   teamAwayActive: false,
+  teamHomeLoading: false,
+  teamAwayLoading: false,
   setTeamHome: () =>
     set(() => ({
       teamHome: teams[Math.floor(Math.random() * teams.length)],
@@ -42,5 +48,13 @@ export const useStore = create<DefaultState>((set) => ({
   setTeamAwayActive: (active: boolean) =>
     set(() => ({
       teamAwayActive: active,
+    })),
+  setTeamHomeLoading: (loading: boolean) =>
+    set(() => ({
+      teamHomeLoading: loading,
+    })),
+  setTeamAwayLoading: (loading: boolean) =>
+    set(() => ({
+      teamAwayLoading: loading,
     })),
 }));
