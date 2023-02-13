@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "name": "FC Barcelona",
+    "logo": "https://i.ibb.co/thHbTdg/barcelona.png",
+    "statistics": {
+      "overall": 83,
+      "ata": 83,
+      "mid": 85,
+      "def": 82
+    }
+  },
+  {
+    "id": 2,
+    "name": "Real Madrid",
+    "logo": "https://i.ibb.co/gWh9Kk3/real-madrid.png",
+    "statistics": {
+      "overall": 85,
+      "ata": 85,
+      "mid": 86,
+      "def": 84
+    }
+  },
+  {
+    "id": 3,
+    "name": "Arsenal",
+    "logo": "https://i.ibb.co/NWQv77F/arsenal.png",
+    "statistics": {
+      "overall": 81,
+      "ata": 82,
+      "mid": 82,
+      "def": 81
+    }
+  },
+  {
+    "id": 4,
+    "name": "Manchester United",
+    "logo": "https://i.ibb.co/8D4XBdt/manchester-united.png",
+    "statistics": {
+      "overall": 82,
+      "ata": 82,
+      "mid": 83,
+      "def": 81
+    }
+  },
+  {
+    "id": 5,
+    "name": "FC Bayern München",
+    "logo": "https://i.ibb.co/RCW4rgS/bayer.png",
+    "statistics": {
+      "overall": 85,
+      "ata": 83,
+      "mid": 85,
+      "def": 84
+    }
+  },
+  {
+    "id": 6,
+    "name": "Juventus",
+    "logo": "https://i.ibb.co/4JjQMW3/juventus.png",
+    "statistics": {
+      "overall": 82,
+      "ata": 82,
+      "mid": 81,
+      "def": 81
+    }
+  },
+  {
+    "id": 7,
+    "name": "Liverpool",
+    "logo": "https://i.ibb.co/7pLy8jj/Liverpool-FC-svg.png",
+    "statistics": {
+      "overall": 84,
+      "ata": 84,
+      "mid": 82,
+      "def": 85
+    }
+  },
+  {
+    "id": 8,
+    "name": "Borussia Dortmund",
+    "logo": "https://i.ibb.co/2vKbW7w/borussia.png",
+    "statistics": {
+      "overall": 81,
+      "ata": 78,
+      "mid": 80,
+      "def": 81
+    }
+  },
+  {
+    "id": 9,
+    "name": "Paris Saint Germain",
+    "logo": "https://i.ibb.co/m45FHJM/psg.png",
+    "statistics": {
+      "overall": 84,
+      "ata": 91,
+      "mid": 83,
+      "def": 83
+    }
+  },
+  {
+    "id": 10,
+    "name": "Tottenham Hotspur",
+    "logo": "https://i.ibb.co/BTXhkLr/Tottenham-Hotspur-svg.png",
+    "statistics": {
+      "overall": 82,
+      "ata": 84,
+      "mid": 82,
+      "def": 80
+    }
+  },
+  {
+    "id": 11,
+    "name": "Chelsea",
+    "logo": "https://i.ibb.co/sgV38CH/Chelsea-FC-svg.png",
+    "statistics": {
+      "overall": 83,
+      "ata": 83,
+      "mid": 79,
+      "def": 83
+    }
+  },
+  {
+    "id": 12,
+    "name": "Milan",
+    "logo": "https://i.ibb.co/rkWfB7Z/milan.png",
+    "statistics": {
+      "overall": 81,
+      "ata": 80,
+      "mid": 81,
+      "def": 80
+    }
+  },
+  {
+    "id": 13,
+    "name": "Leicester City",
+    "logo": "https://i.ibb.co/2F1Y0tG/Leicester-City-crest-svg.png",
+    "statistics": {
+      "overall": 79,
+      "ata": 80,
+      "mid": 80,
+      "def": 79
+    }
+  },
+  {
+    "id": 14,
+    "name": "Manchester City",
+    "logo": "https://i.ibb.co/k9LyHF7/city.png",
+    "statistics": {
+      "overall": 85,
+      "ata": 85,
+      "mid": 87,
+      "def": 84
+    }
+  },
+  {
+    "id": 15,
+    "name": "Atlético Madrid",
+    "logo": "https://i.ibb.co/ZSqVBnW/Atletico-Madrid-2017-logo-svg.png",
+    "statistics": {
+      "overall": 83,
+      "ata": 83,
+      "mid": 83,
+      "def": 81
+    }
+  },
+  {
+    "id": 16,
+    "name": "Inter",
+    "logo": "https://i.ibb.co/5GnXQrd/FC-Internazionale-Milano-2021-svg.png",
+    "statistics": {
+      "overall": 83,
+      "ata": 85,
+      "mid": 83,
+      "def": 83
+    }
+  },
+  {
+    "id": 17,
+    "name": "Benfica",
+    "logo": "https://i.ibb.co/KLy7vS4/benfica.png",
+    "statistics": {
+      "overall": 79,
+      "ata": 80,
+      "mid": 79,
+      "def": 78
+    }
+  },
+  {
+    "id": 18,
+    "name": "Villarreal",
+    "logo": "https://i.ibb.co/W35vJ26/villarreal.png",
+    "statistics": {
+      "overall": 80,
+      "ata": 82,
+      "mid": 80,
+      "def": 79
+    }
+  },
+  {
+    "id": 19,
+    "name": "Roma",
+    "logo": "https://i.ibb.co/kcV93Yk/roma.png",
+    "statistics": {
+      "overall": 80,
+      "ata": 81,
+      "mid": 78,
+      "def": 81
+    }
+  },
+  {
+    "id": 20,
+    "name": "Sevilla",
+    "logo": "https://i.ibb.co/rmzBb1Z/sevilla.png",
+    "statistics": {
+      "overall": 81,
+      "ata": 79,
+      "mid": 82,
+      "def": 80
+    }
+  }
+]

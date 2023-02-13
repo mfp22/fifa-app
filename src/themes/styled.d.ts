@@ -1,13 +1,7 @@
 import 'styled-components';
+import { ITheme } from 'interfaces';
 
 declare module 'styled-components' {
-  export interface DefaultTheme {
-    colors: {
-      background: string;
-      text: string;
-      success: string;
-      warning: string;
-      danger: string;
-    };
-  }
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  export interface DefaultTheme extends ITheme {}
 }
