@@ -6,6 +6,7 @@ const darkTheme = {
     card: '#00141E',
     text: '#95CBE7',
     success: '#00CBDA',
+    successDark: '#056d74',
     warning: '#FBBC04',
     danger: '#F95D8F',
   },

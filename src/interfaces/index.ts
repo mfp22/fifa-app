@@ -5,6 +5,17 @@ export interface IStatistics {
   overall: number;
 }
 
+export interface IButtonComponent {
+  onClick: () => void;
+  label: string;
+}
+
+export interface ITeamComponent {
+  team: ITeam;
+  onReflesh: () => void;
+  locality: string;
+}
+
 export interface ITeam {
   id: number;
   name: string;
@@ -18,6 +29,7 @@ export interface IColors {
   card: string;
   text: string;
   success: string;
+  successDark: string;
   warning: string;
   danger: string;
 }
