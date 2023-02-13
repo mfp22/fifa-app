@@ -8,6 +8,7 @@ export interface IStatistics {
 export interface IButtonComponent {
   onClick: () => void;
   label: string;
+  disabled?: boolean;
 }
 
 export interface ITeamComponent {

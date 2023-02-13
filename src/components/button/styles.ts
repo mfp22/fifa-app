@@ -12,4 +12,5 @@ export const Button = styled.button`
   text-transform: uppercase;
   padding: 1rem 0;
   height: 45px;
+  opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
 `;
