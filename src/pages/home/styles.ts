@@ -5,7 +5,7 @@ export const Home = styled.div`
   background-color: ${({ theme }) => theme.colors.background};
   padding: 0 1.5rem;
   display: grid;
-  grid-template-rows: 60px 240px 60px 240px 1fr;
+  grid-template-rows: 60px 35% 60px 35% 16%;
 `;
 
 export const ButtonWrapper = styled.div`
