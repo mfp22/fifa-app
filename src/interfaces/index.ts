@@ -20,6 +20,7 @@ export interface ITeamComponent {
 export interface ITeam {
   id: number;
   name: string;
+  league?: string;
   logo: string;
   statistics: IStatistics;
 }

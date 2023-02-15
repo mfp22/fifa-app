@@ -2,6 +2,7 @@
   {
     "id": 1,
     "name": "FC Barcelona",
+    "league": "La Liga",
     "logo": "https://i.ibb.co/thHbTdg/barcelona.png",
     "statistics": {
       "overall": 83,
@@ -13,6 +14,7 @@
   {
     "id": 2,
     "name": "Real Madrid",
+    "league": "La Liga",
     "logo": "https://i.ibb.co/gWh9Kk3/real-madrid.png",
     "statistics": {
       "overall": 85,
@@ -24,6 +26,7 @@
   {
     "id": 3,
     "name": "Arsenal",
+    "league": "Premier League",
     "logo": "https://i.ibb.co/tP5wdm7/arsenal.png",
     "statistics": {
       "overall": 81,
@@ -35,6 +38,7 @@
   {
     "id": 4,
     "name": "Manchester United",
+    "league": "Premier League",
     "logo": "https://i.ibb.co/BNF8ht6/manchester-united.png",
     "statistics": {
       "overall": 82,
@@ -46,6 +50,7 @@
   {
     "id": 5,
     "name": "FC Bayern München",
+    "league": "Bundesliga",
     "logo": "https://i.ibb.co/P9Xvp4p/bayer.png",
     "statistics": {
       "overall": 85,
@@ -57,6 +62,7 @@
   {
     "id": 6,
     "name": "Juventus",
+    "league": "Serie A",
     "logo": "https://i.ibb.co/HGypJVs/juventus.png",
     "statistics": {
       "overall": 82,
@@ -68,6 +74,7 @@
   {
     "id": 7,
     "name": "Liverpool",
+    "league": "Premier League",
     "logo": "https://i.ibb.co/rFbdGY3/Liverpool-FC-svg.png",
     "statistics": {
       "overall": 84,
@@ -79,6 +86,7 @@
   {
     "id": 8,
     "name": "Borussia Dortmund",
+    "league": "Bundesliga",
     "logo": "https://i.ibb.co/r4xs5qC/borussia.png",
     "statistics": {
       "overall": 81,
@@ -90,6 +98,7 @@
   {
     "id": 9,
     "name": "Paris Saint Germain",
+    "league": "Ligue 1",
     "logo": "https://i.ibb.co/Lx23Ydm/psg.png",
     "statistics": {
       "overall": 84,
@@ -101,6 +110,7 @@
   {
     "id": 10,
     "name": "Tottenham Hotspur",
+    "league": "Premier League",
     "logo": "https://i.ibb.co/1MTRdww/Tottenham-Hotspur-svg.png",
     "statistics": {
       "overall": 82,
@@ -112,6 +122,7 @@
   {
     "id": 11,
     "name": "Chelsea",
+    "league": "Premier League",
     "logo": "https://i.ibb.co/jLsQP2F/Chelsea-FC-svg.png",
     "statistics": {
       "overall": 83,
@@ -123,6 +134,7 @@
   {
     "id": 12,
     "name": "Milan",
+    "league": "Serie A",
     "logo": "https://i.ibb.co/gg8N8zD/milan.png",
     "statistics": {
       "overall": 81,
@@ -134,6 +146,7 @@
   {
     "id": 13,
     "name": "Leicester City",
+    "league": "Premier League",
     "logo": "https://i.ibb.co/p4t23FM/Leicester-City-crest-svg.png",
     "statistics": {
       "overall": 79,
@@ -145,6 +158,7 @@
   {
     "id": 14,
     "name": "Manchester City",
+    "league": "Premier League",
     "logo": "https://i.ibb.co/jbsdR1P/city.png",
     "statistics": {
       "overall": 85,
@@ -156,6 +170,7 @@
   {
     "id": 15,
     "name": "Atlético Madrid",
+    "league": "La Liga",
     "logo": "https://i.ibb.co/QcZHfdb/Atletico-Madrid-2017-logo-svg.png",
     "statistics": {
       "overall": 83,
@@ -167,6 +182,7 @@
   {
     "id": 16,
     "name": "Inter",
+    "league": "Serie A",
     "logo": "https://i.ibb.co/xSdSVK8/FC-Internazionale-Milano-2021-svg.png",
     "statistics": {
       "overall": 83,
@@ -178,6 +194,7 @@
   {
     "id": 17,
     "name": "Benfica",
+    "league": "Liga Portugal",
     "logo": "https://i.ibb.co/84tDjRp/benfica.png",
     "statistics": {
       "overall": 79,
@@ -189,6 +206,7 @@
   {
     "id": 18,
     "name": "Villarreal",
+    "league": "La Liga",
     "logo": "https://i.ibb.co/RCVQBPh/villarreal.png",
     "statistics": {
       "overall": 80,
@@ -200,6 +218,7 @@
   {
     "id": 19,
     "name": "Roma",
+    "league": "Serie A",
     "logo": "https://i.ibb.co/gz8xNrn/roma.png",
     "statistics": {
       "overall": 80,
@@ -211,6 +230,7 @@
   {
     "id": 20,
     "name": "Sevilla",
+    "league": "La Liga",
     "logo": "https://i.ibb.co/jZ8FK4K/sevilla.png",
     "statistics": {
       "overall": 81,

@@ -25,7 +25,7 @@ const Home = () => {
     setTeamAwayLoading,
   } = useStore();
 
-  const handleGenerate = () => {
+  const handleAddTeam = () => {
     if (teamHomeActive) {
       setTeamHomeLoading(true)
       setTimeout(() => {
@@ -91,11 +91,11 @@ const Home = () => {
 
       <S.ButtonWrapper>
         {teamHomeActive ? (
-          <Button label="Generate Home" onClick={handleGenerate} />
+          <Button label="Add Team Home" onClick={handleAddTeam} />
         ) : (
           <Button
-            label="Generate Away"
-            onClick={handleGenerate}
+            label="Add Team Away"
+            onClick={handleAddTeam}
             disabled={teamAwayActive}
           />
         )}
