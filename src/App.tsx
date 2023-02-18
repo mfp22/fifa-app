@@ -1,15 +1,28 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import GlobalStyle from 'themes/global';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from 'pages/home';
-
+import Settings from 'pages/settings';
+import Header from 'components/header';
+import GlobalStyle from 'themes/global';
 import dark from 'themes/dark';
+import light from 'themes/light';
+import { useStore } from 'store';
+
 
 const App = () => {
+  const darkTheme = useStore((state) => state.darkTheme);
+
   return (
-    <ThemeProvider theme={dark}>
+    <ThemeProvider theme={darkTheme ? dark : light}>
       <GlobalStyle />
-      <Home />
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="/settings" element={<Settings />} />
+        </Routes>
+      </BrowserRouter>
     </ThemeProvider>
   );
 };

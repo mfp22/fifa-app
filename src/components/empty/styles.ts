@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+interface TeamProps {
+  darkTheme: boolean;
+}
+
 export const Team = styled.div`
   padding: 1rem;
   background-color: ${({ theme }) => theme.colors.card};
@@ -12,7 +16,7 @@ export const TeamTop = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: ${({ theme }) => theme.colors.textSecondary};
+  color: ${({ theme }) => theme.colors.cardText};
 `;
 
 export const TeamLocality = styled.p`
@@ -27,15 +31,23 @@ export const TeamMain = styled.div`
   margin: 1rem 0;
 `;
 
-export const TeamLogo = styled.img`
-  width: 65px;
-  height: 65px;
+export const TeamLogo = styled.div`
   margin-bottom: 1rem;
 `;
 
+export const TeamLogoSVG = styled.svg`
+  width: 65px;
+  height: 65px;
+`;
+
+export const TeamLogoPath = styled.path<TeamProps>`
+  fill: ${({ darkTheme }) => (darkTheme ? '#013752' : '#C5E9FD')};
+`;
+
+
 export const TeamName = styled.p`
   font-size: ${({ theme }) => theme.fontSize.medium};
-  color: ${({ theme }) => theme.colors.textSecondary};
+  color: ${({ theme }) => theme.colors.cardText};
   margin: 0;
   font-weight: 500;
 `;
@@ -56,7 +68,7 @@ export const TeamStatisticsItem = styled.div`
 
 export const TeamStatisticsLabel = styled.span`
   font-size: ${({ theme }) => theme.fontSize.small};
-  color: ${({ theme }) => theme.colors.textSecondary};
+  color: ${({ theme }) => theme.colors.cardText};
   margin-bottom: 0.5rem;
   display: block;
   text-transform: uppercase;
@@ -67,7 +79,7 @@ export const TeamStatisticsNumber = styled.p`
   align-items: center;
   justify-content: center;
   font-size: ${({ theme }) => theme.fontSize.medium};
-  color: ${({ theme }) => theme.colors.textSecondary};
+  color: ${({ theme }) => theme.colors.cardText};
   background-color: ${({ theme }) => theme.colors.cardInner};
   border-radius: 4px;
   padding: 0.6rem;

@@ -11,6 +11,11 @@ export interface IButtonComponent {
   disabled?: boolean;
 }
 
+export interface ISwitchComponent {
+  setChecked: () => void;
+  checked: boolean;
+}
+
 export interface ITeamComponent {
   team: ITeam;
   onReflesh: () => void;
@@ -32,10 +37,14 @@ export interface IColors {
   card: string;
   textPrimary: string;
   textSecondary: string;
+  textTertiary: string;
+  cardText: string;
   success: string;
   successDark: string;
   warning: string;
   danger: string;
+  switchColor: string;
+  buttonColor: string;
 }
 
 export interface IFontSizes {

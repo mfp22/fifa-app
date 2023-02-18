@@ -39,7 +39,7 @@ export const TeamLogo = styled.img`
 
 export const TeamName = styled.p`
   font-size: ${({ theme }) => theme.fontSize.medium};
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.textTertiary};
   margin: 0;
   font-weight: 500;
 `;

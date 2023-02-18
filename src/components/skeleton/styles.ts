@@ -1,6 +1,19 @@
-import styled, { keyframes } from 'styled-components'
+import styled, { keyframes, css } from 'styled-components'
+
+interface TeamAnimationProps {
+  darkTheme: boolean;
+}
 
 const skeleton = keyframes`
+  0% {
+    background-color: #EEF9FF;
+  }
+  100% {
+    background-color: #C5E9FD;
+  }
+`;
+
+const skeletonDark = keyframes`
   0% {
     background-color: #002436;
   }
@@ -11,6 +24,15 @@ const skeleton = keyframes`
 
 
 const skeletonSVG = keyframes`
+  0% {
+    fill: #EEF9FF;
+  }
+  100% {
+    fill: #C5E9FD;
+  }
+`;
+
+const skeletonSVGDark = keyframes`
   0% {
     fill: #002436;
   }
@@ -35,12 +57,15 @@ export const TeamTop = styled.div`
   color: ${({ theme }) => theme.colors.textSecondary};
 `;
 
-export const TeamLocality = styled.p`
+export const TeamLocality = styled.p<TeamAnimationProps>`
   font-size: ${({ theme }) => theme.fontSize.small};
   width: 30px;
   height: 10px;
   border-radius: 2px;
-  animation: ${skeleton} 1s linear infinite alternate;
+  animation: ${({ darkTheme }) =>
+    css`
+      ${darkTheme ? skeletonDark : skeleton} 1s linear infinite alternate
+    `}; ;
 `;
 
 export const TeamMain = styled.div`
@@ -57,17 +82,23 @@ export const TeamLogoSVG = styled.svg`
   height: 65px;
 `;
 
-export const TeamLogoPath = styled.path`
-  animation: ${skeletonSVG} 1s linear infinite alternate;
+export const TeamLogoPath = styled.path<TeamAnimationProps>`
+  animation: ${({ darkTheme }) =>
+    css`
+      ${darkTheme ? skeletonSVGDark : skeletonSVG} 1s linear infinite alternate
+    `};
 `;
 
 
-export const TeamName = styled.div`
+export const TeamName = styled.div<TeamAnimationProps>`
   width: 65px;
   height: 10px;
   margin: 0;
   border-radius: 2px;
-  animation: ${skeleton} 1s linear infinite alternate;
+  animation: ${({ darkTheme }) =>
+    css`
+      ${darkTheme ? skeletonDark : skeleton} 1s linear infinite alternate
+    `}; ;
 `;
 
 export const TeamStatistics = styled.div`
@@ -86,21 +117,24 @@ export const TeamStatisticsItem = styled.div`
 
 export const TeamStatisticsLabel = styled.span`
   font-size: ${({ theme }) => theme.fontSize.small};
-  color: ${({ theme }) => theme.colors.textSecondary};
+  color: ${({ theme }) => theme.colors.cardText};
   margin-bottom: 0.5rem;
   display: block;
   text-transform: uppercase;
 `;
 
-export const TeamStatisticsNumber = styled.p`
+export const TeamStatisticsNumber = styled.p<TeamAnimationProps>`
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: ${({ theme }) => theme.fontSize.medium};
-  color: ${({ theme }) => theme.colors.textSecondary};
+  color: ${({ theme }) => theme.colors.cardText};
   border-radius: 4px;
   padding: 0.6rem;
   width: 20px;
   height: 20px;
-  animation: ${skeleton} 1s linear infinite alternate;
+  animation: ${({ darkTheme }) =>
+    css`
+      ${darkTheme ? skeletonDark : skeleton} 1s linear infinite alternate
+    `}; ;
 `;

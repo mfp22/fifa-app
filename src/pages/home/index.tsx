@@ -1,6 +1,5 @@
 import React from 'react';
 import * as S from './styles';
-import Header from 'components/header';
 import Team from 'components/team';
 import Empty from 'components/empty';
 import Skeleton from 'components/skeleton';
@@ -62,11 +61,10 @@ const Home = () => {
 
   return (
     <S.Home>
-      <Header />
       {teamHomeLoading ? (
-        <Skeleton />
-      ) : !teamHomeLoading && teamHomeActive ? (
         <Empty />
+      ) : !teamHomeLoading && teamHomeActive ? (
+        <Skeleton />
       ) : (
         <Team
           team={teamHome}
