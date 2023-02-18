@@ -10,6 +10,16 @@ const skeleton = keyframes`
 `;
 
 
+const skeletonSVG = keyframes`
+  0% {
+    fill: #002436;
+  }
+  100% {
+    fill: #013752;
+  }
+`;
+
+
 export const Team = styled.div`
   padding: 1rem;
   background-color: ${({ theme }) => theme.colors.card};
@@ -37,13 +47,20 @@ export const TeamMain = styled.div`
   margin: auto;
 `;
 
+
 export const TeamLogo = styled.div`
+  margin-bottom: 1rem;
+`;
+
+export const TeamLogoSVG = styled.svg`
   width: 65px;
   height: 65px;
-  margin-bottom: 1rem;
-  border-radius: 8px;
-  animation: ${skeleton} 1s linear infinite alternate;
 `;
+
+export const TeamLogoPath = styled.path`
+  animation: ${skeletonSVG} 1s linear infinite alternate;
+`;
+
 
 export const TeamName = styled.div`
   width: 65px;
