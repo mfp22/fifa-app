@@ -238,5 +238,125 @@
       "mid": 82,
       "def": 80
     }
+  },
+  {
+    "id": 21,
+    "name": "Wolverhampton Wanderers",
+    "league": "Premier League",
+    "logo": "https://i.ibb.co/LZbfNWW/wolver.png",
+    "statistics": {
+      "overall": 78,
+      "ata": 78,
+      "mid": 80,
+      "def": 74
+    }
+  },
+  {
+    "id": 22,
+    "name": "Napoli",
+    "league": "Seria A",
+    "logo": "https://i.ibb.co/t3jfdcb/napoli.png",
+    "statistics": {
+      "overall": 80,
+      "ata": 80,
+      "mid": 81,
+      "def": 80
+    }
+  },
+  {
+    "id": 23,
+    "name": "RB Leipzig",
+    "league": "Bundesliga",
+    "logo": "https://i.ibb.co/Jjby4J9/leipzip.png",
+    "statistics": {
+      "overall": 81,
+      "ata": 83,
+      "mid": 81,
+      "def": 80
+    }
+  },
+  {
+    "id": 24,
+    "name": "Bayer 04 Leverkusen",
+    "league": "Bundesliga",
+    "logo": "https://i.ibb.co/4ZxRF0B/leverkusen.png",
+    "statistics": {
+      "overall": 79,
+      "ata": 80,
+      "mid": 79,
+      "def": 80
+    }
+  },
+  {
+    "id": 25,
+    "name": "Eintracht Frankfurt",
+    "league": "Bundesliga",
+    "logo": "https://i.ibb.co/xJZtJVG/frank.png",
+    "statistics": {
+      "overall": 78,
+      "ata": 78,
+      "mid": 78,
+      "def": 77
+    }
+  },
+  {
+    "id": 26,
+    "name": "Monaco",
+    "league": "Ligue 1",
+    "logo": "https://i.ibb.co/bLcQV4z/monaco.png",
+    "statistics": {
+      "overall": 77,
+      "ata": 81,
+      "mid": 77,
+      "def": 77
+    }
+  },
+  {
+    "id": 27,
+    "name": "Olympique Marseille",
+    "league": "Ligue 1",
+    "logo": "https://i.ibb.co/GF9kVJL/marsella.png",
+    "statistics": {
+      "overall": 78,
+      "ata": 79,
+      "mid": 78,
+      "def": 77
+    }
+  },
+  {
+    "id": 28,
+    "name": "Olympique Lyonnais",
+    "league": "Ligue 1",
+    "logo": "https://i.ibb.co/ZMvBxN9/lyon.png",
+    "statistics": {
+      "overall": 77,
+      "ata": 75,
+      "mid": 76,
+      "def": 77
+    }
+  },
+  {
+    "id": 29,
+    "name": "Newcastle United",
+    "league": "Premier League",
+    "logo": "https://i.ibb.co/FqYXtCd/newcastle.png",
+    "statistics": {
+      "overall": 79,
+      "ata": 79,
+      "mid": 78,
+      "def": 79
+    }
+  },
+  {
+    "id": 30,
+    "name": "Ajax",
+    "league": "Eredivisie",
+    "logo": "https://i.ibb.co/R3zMV2s/ajax.png",
+    "statistics": {
+      "overall": 77,
+      "ata": 79,
+      "mid": 78,
+      "def": 76
+    }
   }
 ]
