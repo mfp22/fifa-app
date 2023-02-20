@@ -35,7 +35,7 @@ export const useStore = create<DefaultState>((set) => ({
   teamAwayActive: false,
   teamHomeLoading: false,
   teamAwayLoading: false,
-  theme: localStorage.getItem('theme') || 'light',
+  theme: localStorage.getItem('theme') || 'dark',
   setTeamHome: () =>
     set(() => ({
       teamHome: teams[Math.floor(Math.random() * teams.length)],

@@ -47,7 +47,7 @@ export const Team = styled.div`
   background-color: ${({ theme }) => theme.colors.card};
   border-radius: 8px;
   display: grid;
-  grid-template-rows: 20px 110px 70px;
+  grid-template-rows: 20px 1fr 70px;
 `;
 
 export const TeamTop = styled.div`
