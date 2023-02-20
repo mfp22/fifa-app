@@ -7,10 +7,18 @@ import { useStore } from 'store';
 
 const Settings = () => {
   const navigate = useNavigate();
-  const darkTheme = useStore((state) => state.darkTheme);
-  const { setDarkTheme } = useStore();
+  const theme = useStore((state) => state.theme);
+  const { setTheme } = useStore();
 
-  const handleTheme = () => setDarkTheme(!darkTheme);
+  const handleTheme = () => {
+    if (theme === 'dark') {
+      setTheme('light');
+      localStorage.setItem('theme', 'light');
+    } else {
+      setTheme('dark');
+      localStorage.setItem('theme', 'dark');
+    }
+  }
 
   return (
     <S.Settings>
@@ -21,8 +29,8 @@ const Settings = () => {
       <S.SettingsSection>
         <S.SettingsSectionLabel>Theme</S.SettingsSectionLabel>
         <S.SettingsSectionItem>
-          <S.SettingsSectionItemLabel>Light Mode</S.SettingsSectionItemLabel>
-          <Switch checked={darkTheme} setChecked={handleTheme} />
+          <S.SettingsSectionItemLabel>Dark Mode</S.SettingsSectionItemLabel>
+          <Switch checked={theme === 'dark'} setChecked={handleTheme} />
         </S.SettingsSectionItem>
       </S.SettingsSection>
     </S.Settings>

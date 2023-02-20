@@ -11,10 +11,11 @@ import { useStore } from 'store';
 
 
 const App = () => {
-  const darkTheme = useStore((state) => state.darkTheme);
+
+  const theme = useStore((state) => state.theme);
 
   return (
-    <ThemeProvider theme={darkTheme ? dark : light}>
+    <ThemeProvider theme={theme === 'dark' ? dark : light}>
       <GlobalStyle />
       <BrowserRouter>
         <Header />

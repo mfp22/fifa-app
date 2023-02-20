@@ -1,7 +1,7 @@
 import styled, { keyframes, css } from 'styled-components'
 
 interface TeamAnimationProps {
-  darkTheme: boolean;
+  themeState: string;
 }
 
 const skeleton = keyframes`
@@ -62,9 +62,11 @@ export const TeamLocality = styled.p<TeamAnimationProps>`
   width: 30px;
   height: 10px;
   border-radius: 2px;
-  animation: ${({ darkTheme }) =>
+  animation: ${({ themeState }) =>
     css`
-      ${darkTheme ? skeletonDark : skeleton} 1s linear infinite alternate
+      ${themeState === 'dark'
+        ? skeletonDark
+        : skeleton} 1s linear infinite alternate
     `}; ;
 `;
 
@@ -83,21 +85,25 @@ export const TeamLogoSVG = styled.svg`
 `;
 
 export const TeamLogoPath = styled.path<TeamAnimationProps>`
-  animation: ${({ darkTheme }) =>
+  animation: ${({ themeState }) =>
     css`
-      ${darkTheme ? skeletonSVGDark : skeletonSVG} 1s linear infinite alternate
+      ${themeState === 'dark'
+        ? skeletonSVGDark
+        : skeletonSVG} 1s linear infinite alternate
     `};
 `;
 
 
 export const TeamName = styled.div<TeamAnimationProps>`
   width: 65px;
-  height: 10px;
+  height: 12px;
   margin: 0;
   border-radius: 2px;
-  animation: ${({ darkTheme }) =>
+  animation: ${({ themeState }) =>
     css`
-      ${darkTheme ? skeletonDark : skeleton} 1s linear infinite alternate
+      ${themeState === 'dark'
+        ? skeletonDark
+        : skeleton} 1s linear infinite alternate
     `}; ;
 `;
 
@@ -133,8 +139,8 @@ export const TeamStatisticsNumber = styled.p<TeamAnimationProps>`
   padding: 0.6rem;
   width: 20px;
   height: 20px;
-  animation: ${({ darkTheme }) =>
+  animation: ${({ themeState }) =>
     css`
-      ${darkTheme ? skeletonDark : skeleton} 1s linear infinite alternate
+      ${themeState === 'dark' ? skeletonDark : skeleton} 1s linear infinite alternate
     `}; ;
 `;

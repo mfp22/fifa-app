@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 interface TeamProps {
-  darkTheme: boolean;
+  themeState: string;
 }
 
 export const Team = styled.div`
@@ -41,7 +41,7 @@ export const TeamLogoSVG = styled.svg`
 `;
 
 export const TeamLogoPath = styled.path<TeamProps>`
-  fill: ${({ darkTheme }) => (darkTheme ? '#013752' : '#C5E9FD')};
+  fill: ${({ themeState }) => (themeState === 'dark' ? '#013752' : '#C5E9FD')};
 `;
 
 

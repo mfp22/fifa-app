@@ -6,10 +6,10 @@ import * as S from './styles';
 import { useStore } from 'store';
 
 const Header = () => {
-  const darkTheme = useStore((state) => state.darkTheme);
+  const theme = useStore((state) => state.theme);
   return (
     <S.Header>
-      <S.Logo src={darkTheme ? Logo : LogoDark} />
+      <S.Logo src={theme === 'dark' ? Logo : LogoDark} />
       <S.Settings to="/settings">
         <BiCog size={24} />
       </S.Settings>

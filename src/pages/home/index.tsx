@@ -62,9 +62,9 @@ const Home = () => {
   return (
     <S.Home>
       {teamHomeLoading ? (
-        <Empty />
-      ) : !teamHomeLoading && teamHomeActive ? (
         <Skeleton />
+      ) : !teamHomeLoading && teamHomeActive ? (
+        <Empty />
       ) : (
         <Team
           team={teamHome}
