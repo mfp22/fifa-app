@@ -30,7 +30,7 @@ export const VS = styled.span`
 `;
 
 export const VSLabel = styled.span`
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.textPrimary};
   position: relative;
   z-index: 10;
 `;

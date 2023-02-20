@@ -358,5 +358,101 @@
       "mid": 78,
       "def": 76
     }
+  },
+  {
+    "id": 31,
+    "name": "Fiorentina",
+    "league": "Seria A",
+    "logo": "https://i.ibb.co/M1ZDhGB/fiorentina.png",
+    "statistics": {
+      "overall": 78,
+      "ata": 78,
+      "mid": 78,
+      "def": 78
+    }
+  },
+  {
+    "id": 32,
+    "name": "Atalanta",
+    "league": "Seria A",
+    "logo": "https://i.ibb.co/Fh4BQgt/atalanta.png",
+    "statistics": {
+      "overall": 79,
+      "ata": 78,
+      "mid": 79,
+      "def": 77
+    }
+  },
+  {
+    "id": 33,
+    "name": "Lazio",
+    "league": "Seria A",
+    "logo": "https://i.ibb.co/kKZv76Z/lazio.png",
+    "statistics": {
+      "overall": 79,
+      "ata": 80,
+      "mid": 80,
+      "def": 77
+    }
+  },
+  {
+    "id": 34,
+    "name": "Sporting CP",
+    "league": "Liga Portugal",
+    "logo": "https://i.ibb.co/y5YYyth/sporting.png",
+    "statistics": {
+      "overall": 78,
+      "ata": 77,
+      "mid": 79,
+      "def": 78
+    }
+  },
+  {
+    "id": 35,
+    "name": "Porto",
+    "league": "Liga Portugal",
+    "logo": "https://i.ibb.co/yWpkD1d/porto.png",
+    "statistics": {
+      "overall": 78,
+      "ata": 80,
+      "mid": 78,
+      "def": 76
+    }
+  },
+  {
+    "id": 36,
+    "name": "Athletic Club",
+    "league": "La Liga",
+    "logo": "https://i.ibb.co/cYRW7Lm/athletic.png",
+    "statistics": {
+      "overall": 79,
+      "ata": 80,
+      "mid": 78,
+      "def": 79
+    }
+  },
+  {
+    "id": 37,
+    "name": "Real Betis",
+    "league": "La Liga",
+    "logo": "https://i.ibb.co/28C0965/betis.png",
+    "statistics": {
+      "overall": 79,
+      "ata": 80,
+      "mid": 81,
+      "def": 76
+    }
+  },
+  {
+    "id": 38,
+    "name": "Real Sociedad",
+    "league": "La Liga",
+    "logo": "https://i.ibb.co/ky13d9h/real-sociedad.png",
+    "statistics": {
+      "overall": 79,
+      "ata": 78,
+      "mid": 80,
+      "def": 78
+    }
   }
 ]
