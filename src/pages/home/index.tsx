@@ -5,57 +5,51 @@ import Empty from 'components/empty';
 import Skeleton from 'components/skeleton';
 import Button from 'components/button';
 import VS from 'components/vs';
-import { useStore } from 'store';
+import { settings } from 'store';
+import { useStore } from '@state-adapt/react';
 
 const Home = () => {
-  const teamHome = useStore((state) => state.teamHome);
-  const teamAway = useStore((state) => state.teamAway);
-  const teamHomeActive = useStore((state) => state.teamHomeActive);
-  const teamAwayActive = useStore((state) => state.teamAwayActive);
-  const teamHomeLoading = useStore((state) => state.teamHomeLoading);
-  const teamAwayLoading = useStore((state) => state.teamAwayLoading);
-
   const {
-    setTeamHome,
-    setTeamAway,
-    setTeamHomeActive,
-    setTeamAwayActive,
-    setTeamHomeLoading,
-    setTeamAwayLoading,
-  } = useStore();
+    teamHome,
+    teamAway,
+    teamHomeActive,
+    teamAwayActive,
+    teamHomeLoading,
+    teamAwayLoading,
+  } = useStore(settings);
 
   const handleAddTeam = () => {
     if (teamHomeActive) {
-      setTeamHomeLoading(true)
+      settings.setTeamHomeLoading(true);
       setTimeout(() => {
-        setTeamHome();
-        setTeamHomeActive(false);
-        setTeamHomeLoading(false)
+        settings.setTeamHomeRandom();
+        settings.setTeamHomeActive(false);
+        settings.setTeamHomeLoading(false);
       }, 1000);
     } else {
-      setTeamAwayLoading(true)
+      settings.setTeamAwayLoading(true);
       setTimeout(() => {
-        setTeamAway();
-        setTeamAwayActive(true);
-        setTeamAwayLoading(false)
+        settings.setTeamAwayRandom();
+        settings.setTeamAwayActive(true);
+        settings.setTeamAwayLoading(false);
       }, 1000);
     }
   };
 
   const handleRefleshTeamHome = () => {
-    setTeamHomeLoading(true)
+    settings.setTeamHomeLoading(true);
     setTimeout(() => {
-      setTeamHome();
-      setTeamHomeActive(false);
-      setTeamHomeLoading(false)
+      settings.setTeamHomeRandom();
+      settings.setTeamHomeActive(false);
+      settings.setTeamHomeLoading(false);
     }, 1000);
   };
 
   const handleRefleshTeamAway = () => {
-    setTeamAwayLoading(true)
+    settings.setTeamAwayLoading(true);
     setTimeout(() => {
-      setTeamAway();
-      setTeamAwayLoading(false)
+      settings.setTeamAwayRandom();
+      settings.setTeamAwayLoading(false);
     }, 1000);
   };
 

@@ -1,9 +1,9 @@
 import React from 'react';
-import { useStore } from 'store';
+import { useTheme } from 'store';
 import * as S from './styles';
 
 const Skeleton = () => {
-  const theme = useStore((state) => state.theme);
+  const theme = useTheme();
   return (
     <S.Team>
       <S.TeamTop>

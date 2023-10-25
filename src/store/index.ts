@@ -1,8 +1,11 @@
-import { create } from 'zustand';
 import { ITeam } from 'interfaces';
 import teams from 'data/data.json';
+import { createAdapter, joinAdapters } from '@state-adapt/core';
+import { booleanAdapter } from '@state-adapt/core/adapters';
+import { adapt } from 'state-adapt';
+import { useStore } from '@state-adapt/react';
 
-interface DefaultState {
+interface State {
   teamHome: ITeam;
   teamAway: ITeam;
   teamHomeActive: boolean;
@@ -10,14 +13,34 @@ interface DefaultState {
   teamHomeLoading: boolean;
   teamAwayLoading: boolean;
   theme: string;
-  setTeamHome: () => void;
-  setTeamAway: () => void;
-  setTeamHomeActive: (active: boolean) => void;
-  setTeamAwayActive: (active: boolean) => void;
-  setTeamHomeLoading: (loading: boolean) => void;
-  setTeamAwayLoading: (loading: boolean) => void;
-  setTheme: (theme: string) => void;
 }
+
+const initialState: State = {
+  teamHome: teams[0],
+  teamAway: teams[1],
+  teamHomeActive: true,
+  teamAwayActive: false,
+  teamHomeLoading: false,
+  teamAwayLoading: false,
+  theme: localStorage.getItem('theme') || 'dark',
+};
+
+const adapter = joinAdapters<State>()({
+  teamHome: createAdapter<ITeam>()({
+    setRandom: () => teams[Math.floor(Math.random() * teams.length)],
+  }),
+  teamAway: createAdapter<ITeam>()({
+    setRandom: (state) => generateTeamAway(state),
+  }),
+  teamHomeActive: booleanAdapter,
+  teamAwayActive: booleanAdapter,
+  teamHomeLoading: booleanAdapter,
+  teamAwayLoading: booleanAdapter,
+  theme: createAdapter<string>()({}),
+})();
+
+export const settings = adapt(initialState, adapter);
+export const useTheme = () => useStore(settings, ['theme']).theme;
 
 const generateTeamAway = (teamHome: ITeam) => {
   const filterByOverall = teams.filter(
@@ -27,41 +50,3 @@ const generateTeamAway = (teamHome: ITeam) => {
   );
   return filterByOverall[Math.floor(Math.random() * filterByOverall.length)];
 };
-
-export const useStore = create<DefaultState>((set) => ({
-  teamHome: teams[0],
-  teamAway: teams[1],
-  teamHomeActive: true,
-  teamAwayActive: false,
-  teamHomeLoading: false,
-  teamAwayLoading: false,
-  theme: localStorage.getItem('theme') || 'dark',
-  setTeamHome: () =>
-    set(() => ({
-      teamHome: teams[Math.floor(Math.random() * teams.length)],
-    })),
-  setTeamAway: () =>
-    set((state) => ({
-      teamAway: generateTeamAway(state.teamHome),
-    })),
-  setTeamHomeActive: (active: boolean) =>
-    set(() => ({
-      teamHomeActive: active,
-    })),
-  setTeamAwayActive: (active: boolean) =>
-    set(() => ({
-      teamAwayActive: active,
-    })),
-  setTeamHomeLoading: (loading: boolean) =>
-    set(() => ({
-      teamHomeLoading: loading,
-    })),
-  setTeamAwayLoading: (loading: boolean) =>
-    set(() => ({
-      teamAwayLoading: loading,
-    })),
-  setTheme: (theme: string) =>
-    set(() => ({
-      theme: theme,
-    })),
-}));

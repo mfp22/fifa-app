@@ -1,9 +1,9 @@
 import React from 'react';
 import * as S from './styles';
-import { useStore } from 'store';
+import { useTheme } from 'store';
 
 const Empty = () => {
-  const theme = useStore((state) => state.theme);
+  const theme = useTheme();
   return (
     <S.Team>
       <S.TeamTop>

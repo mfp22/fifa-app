@@ -1,24 +1,23 @@
 import React from 'react';
 import * as S from './styles';
 import { useNavigate } from 'react-router-dom';
-import Switch from "components/switch"
+import Switch from 'components/switch';
 import { BiChevronLeft } from 'react-icons/bi';
-import { useStore } from 'store';
+import { settings, useTheme } from 'store';
 
 const Settings = () => {
   const navigate = useNavigate();
-  const theme = useStore((state) => state.theme);
-  const { setTheme } = useStore();
+  const theme = useTheme();
 
   const handleTheme = () => {
     if (theme === 'dark') {
-      setTheme('light');
+      settings.setTheme('light');
       localStorage.setItem('theme', 'light');
     } else {
-      setTheme('dark');
+      settings.setTheme('dark');
       localStorage.setItem('theme', 'dark');
     }
-  }
+  };
 
   return (
     <S.Settings>
